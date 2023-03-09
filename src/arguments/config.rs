@@ -1,12 +1,13 @@
 use crate::arguments::argument_parsing;
 
+// 显示类型
 #[derive(Debug)]
-pub enum Style {
-    Ascii,
-    Blocks,
-    Braille,
-    Numbers,
-    OneChar,
+pub enum Style { 
+    Ascii, // Ascii 文字
+    Blocks,  // 块
+    Braille, // 盲文
+    Numbers, // 纯数字
+    OneChar, // 一个字符
 }
 
 #[derive(Debug)]
