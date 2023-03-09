@@ -87,7 +87,7 @@ Options:
 ➜ cargo build --quiet && target/debug/ascii_img -S braille '/xxxx/rustdocs.png'
 
 ➜ cargo build --quiet && target/debug/ascii_img -S ascii -s 5 '/xxxx/rustdocs.png'
-➜ cargo build --quiet && target/debug/ascii_img -S onechar -s 50 '/xxxx/rustdocs.png'  
+➜ cargo build --quiet && target/debug/ascii_img -S ascii --table " ,.,:,x,@" '/xxxx/rustdocs.png' 
 
 
 
