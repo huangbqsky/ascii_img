@@ -35,10 +35,16 @@ Tai : 命令行图片转 ASCII 艺术 https://github.com/MustafaSalih1993/tai
 
 Rust wasm image to ascii：Rust Wasm 图片转 ASCII 艺术 https://github.com/lecepin/rust-wasm-image-ascii
 
-### Help
+
+### Building & Testing
+
+you can clone ascii_img repo and build it locally
 
 ```
-cargo build --quiet && target/debug/ascii_img -h                                        
+➜ git clone https://github.com/huangbqsky/ascii_img
+➜ cd ascii_img
+➜ cargo build --quiet && target/debug/ascii_img -h  
+                                   
 USAGE: target/debug/ascii_img [Options] IMAGE
 
 Options:
@@ -88,7 +94,5 @@ Options:
 
 ➜ cargo build --quiet && target/debug/ascii_img -S ascii -s 5 '/xxxx/rustdocs.png'
 ➜ cargo build --quiet && target/debug/ascii_img -S ascii --table " ,.,:,x,@" '/xxxx/rustdocs.png' 
-
-
 
 ```
