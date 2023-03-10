@@ -72,7 +72,7 @@ Options:
     -t, --table TABLE_OF_CHARACTERS
                         Make a custom ascii table,(works only with "ascii"
                         Style) seperated by ','
-                        ex: tai -S ascii --table " ,.,:,x,@" image.png
+                        ex: ascii_img -S ascii --table " ,.,:,x,@" image.png
     -v, --version       Print tai's Version and exit!
 ```
 
