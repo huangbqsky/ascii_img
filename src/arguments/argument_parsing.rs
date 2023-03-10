@@ -3,6 +3,8 @@ use getopts::Options;
 const VERSION: &str = "0.0.8"; // program version
 
 pub fn parse(args: Vec<String>) -> Option<Config> {
+    // package name in cargo.toml file
+    let package_name = env!("CARGO_CRATE_NAME");
     // defaults
     let mut config = Config::default();
     let program = args[0].clone();
@@ -49,10 +51,12 @@ pub fn parse(args: Vec<String>) -> Option<Config> {
     opts.optopt(
         "t",
         "table",
-        "Make a custom ascii table,(works only with \"ascii\" Style) seperated by ','\n\
-                            \t\t\t\t ex: tai -S ascii --table \" ,.,:,x,@\" image.png",
+        &format!("Make a custom ascii table,(works only with \"ascii\" Style) seperated by ','\n\
+                            \t\t\t\t ex: {} -S ascii --table \" ,.,:,x,@\" image.png", package_name),
         "TABLE_OF_CHARACTERS",
     );
+
+
     opts.optflag("v", "version", "Print tai's Version and exit!");
 
     let matches = match opts.parse(&args[1..]) {
