@@ -6,8 +6,29 @@ use arguments::config::{Config, Style};
 use operations::{ascii::img_to_ascii, braille::img_to_braille, onechar::img_to_onechar};
 use std::env;
 
-// TODO1: need better naming for functions and variables, it's sucks because
-//       im not a native English speaker.
+/*
+                                 _
+                              _ooOoo_
+                             o8888888o
+                             88" . "88
+                             (| -_- |)
+                             O\  =  /O
+                          ____/`---'\____
+                        .'  \\|     |//  `.
+                       /  \\|||  :  |||//  \
+                      /  _||||| -:- |||||_  \
+                      |   | \\\  -  /'| |   |
+                      | \_|  `\`---'//  |_/ |
+                      \  .-\__ `-. -'__/-.  /
+                    ___`. .'  /--.--\  `. .'___
+                 ."" '<  `.___\_<|>_/___.' _> \"".
+                | | :  `- \`. ;`. _/; .'/ /  .' ; |    
+                \  \ `-.   \_\_`. _.'_/_/  -' _.' /
+  ================-.`___`-.__\ \___  /__.-'_.'_.-'================
+                              `=--=-'                  
+
+                   佛祖保佑    永无BUG    永不宕机
+*/
 
 fn main() {
     let mut args = env::args();

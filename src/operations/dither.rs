@@ -1,7 +1,9 @@
 use image::RgbaImage;
 // This is error diff algorithm check the source below.
 // source : https://en.wikipedia.org/wiki/Floyd-Steinberg_dithering
-
+// 图像抖动算法：https://blog.csdn.net/ganbelieve/article/details/102960135
+// 利用Floyd-Steinberg方法（dithering）抖动算法，将灰度图转换为二值图
+// 图案法(patterning)是指灰度可以用一定比例的黑白点组成的区域表示，从而达到整体图象的灰度感。黑白点的位置选择称为图案化。
 pub trait Dither {
     fn dither(&mut self, scale: u8);
     fn calculate_pixel(&mut self, pixel_coord: (u32, u32), err_pixel: [f32; 3], cal: f32);

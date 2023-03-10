@@ -6,7 +6,7 @@ use std::{fs::File, thread::sleep, time::Duration};
 
 use super::otsu_threshold::OtsuThreshold;
 
-/* Image to braille:
+/* Image to braille: 图片转化为盲文艺术图
    source: https://en.wikipedia.org/wiki/Braille_Patterns
 
 - open the image
@@ -16,7 +16,7 @@ use super::otsu_threshold::OtsuThreshold;
 - parse the binary and turn it to a valid number
 - calculate the number and print a char based on it
 */
-
+// 图片转化为盲文艺术图
 pub fn img_to_braille(config: Config) {
     // checking if its animated
     if config.image_file.ends_with(".gif") {

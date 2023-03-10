@@ -76,6 +76,7 @@ pub fn resize(img: DynamicImage, config: &Config) -> RgbaImage {
 
 // this will open the image path,
 // and resize the image and turn it into image buffer;
+// 图片转化为单个字符艺术图： 通过大津算法，将一个灰度图像退化为二值图像
 pub fn get_luma_buffer(config: &Config) -> Option<GrayImage> {
     let img = if let Ok(image) = image::open(&config.image_file) {
         image

@@ -1,11 +1,13 @@
 use image::GrayImage;
 
+// 大津算法，自动对基于聚类的图像进行二值化，或者说，将一个灰度图像退化为二值图像
 pub trait OtsuThreshold {
     fn get_histogram(&mut self) -> [usize; 256];
     fn get_otsu_value(&mut self) -> u8;
     fn threshold(&mut self);
 }
 
+// 将一个灰度图像退化为二值图像
 impl OtsuThreshold for GrayImage {
     fn get_histogram(&mut self) -> [usize; 256] {
         let mut out = [0; 256];

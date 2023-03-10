@@ -23,7 +23,7 @@ algorithm for animated images work this way:
     - loop into the array of frames and print it to stdout
 */
 
-// img_to_ascii converts to ascii,numbers,blocks
+// 图片转成 ASCII 艺术图 img_to_ascii converts to ascii（ASCII 艺术图）, numbers （数字艺术图）, blocks （字符块艺术图）
 pub fn img_to_ascii(config: Config, table: &[char]) {
     if config.image_file.ends_with(".gif") {
         print_animated_image(&config, table);
